@@ -1,6 +1,22 @@
 # banana
+Shopping app for visually impaired.  
+## Some things I implemented
+Flutter, Dart, Firebase ML Kit, flutter_tts package, Android phone
 
-The banana way is the ultimate way.
+## How to run the program how I did. 
+I used an emulator with hardware accelerator from Android studio, 
+The emulator was for a Pixel 2 API R  with resolution 1080 x 1920: 420 dpi, playstore, CPU - x86.  
+
+IDE: Intellij Community Edition  2019.2.2
+OS: Windows 10 64 bit
+GPU: Nvidia GeForce GTX 1050
+
+I had to open android studio and go to Configure -> AVD Manager and click on the play symbol for the emulator. 
+With the emulator running I click run on Intellij and the app works.  Then you can download some photos to your emulator from your drive and upload those images into the app for image labeling.  
+Google drive works sporadically with this emulator.  
+
+Once you upload images you can click on the results for it to convert text to speech.  
+
 
 ## Getting Started
 
@@ -16,13 +32,5 @@ For help getting started with Flutter, view our
 samples, guidance on mobile development, and a full API reference.
 
 - Vision (https://cloud.google.com/vision/docs) - but for mobile apps use Firebase ML Kit (https://firebase.google.com/docs/ml-kit).
-- Natural Language (https://cloud.google.com/natural-language/docs)
-- Translate (https://cloud.google.com/translate/docs)
-- Video Intelligence (https://cloud.google.com/video-intelligence/docs)
-- Speech-To-Text (https://cloud.google.com/speech-to-text/docs)
 - Text-To-Speech (https://cloud.google.com/text-to-speech/docs)
 Firebase (https://firebase.google.com/) - mobile / web development platform featuring the Firebase realtime database
-App Engine (https://cloud.google.com/appengine/docs)- deploy web apps in Python, Node.js, Ruby, and more!
-Cloud Functions (https://cloud.google.com/functions) - deploy single functions of backend code
-Cloud Firestore (https://cloud.google.com/firestore/docs) easy-to-use realtime NoSQL database
-Google Maps Platform (https://cloud.google.com/maps-platform)
