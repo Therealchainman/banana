@@ -20,6 +20,7 @@ dependencies:
   flutter:
     sdk: flutter
   image_picker: ^0.6.5+2
+  hover_effect: ^0.6.0
   camera: ^0.5.6+1
   firebase_ml_vision: ^0.9.3+8
   # Check that you have this dependency (added in the previous step)

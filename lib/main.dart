@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-
+import 'package:hover_effect/hover_effect.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:firebase_ml_vision/firebase_ml_vision.dart';
 
@@ -43,15 +43,18 @@ class _MyHomePageState extends State<MyHomePage> {
 
     final List<ImageLabel> cloudLabels =
     await cloudLabeler.processImage(visionImage);
+    final List<double> tracker = new List();
 
     for (ImageLabel label in cloudLabels) {
       final confidence = label.confidence.toStringAsFixed(2);
       final name = label.text;
-
+      if (tracker.length == 3) {
+        break;
+      }
+      tracker.add(label.confidence);
       setState(() {
         text = "$text $name   $confidence \n";
 
-        print(text);
       });
     }
 
@@ -61,6 +64,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.blueGrey[800],
       body: Column(
         children: <Widget>[
           SizedBox(height: 100.0),
@@ -86,27 +90,40 @@ class _MyHomePageState extends State<MyHomePage> {
             child: FlatButton.icon(
               icon: Icon(
                 Icons.photo_camera,
-                size: 100,
+                size: imageLoaded ? 100 : 350,
+                color: Colors.orange,
               ),
               label: Text(''),
-              textColor: Theme.of(context).primaryColor,
+              textColor: Theme.of(context).hoverColor,
               onPressed: () async {
                 pickImage();
               },
             ),
           ),
-          SizedBox(height: 10.0),
-          SizedBox(height: 10.0),
+          SizedBox(height: 20.0),
+          SizedBox(height: 20.0),
           text == ''
-              ? Text('Text will display here')
+              ? Text('Choose an Image',
+              style: TextStyle(
+              fontSize: 40,
+              fontWeight: FontWeight.bold,
+              color: Colors.grey[400],),)
               : Expanded(
             child: SingleChildScrollView(
               child: Padding(
                 padding: const EdgeInsets.all(15.0),
+                child: Center(
                 child: Text(
                   text,
+                  textAlign: TextAlign.center,
+                  overflow: TextOverflow.visible,
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.grey[400],),
                 ),
               ),
+              )
             ),
           ),
         ],
