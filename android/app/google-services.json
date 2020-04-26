@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "456341155701",
+    "firebase_url": "https://avian-buffer-275310.firebaseio.com",
+    "project_id": "avian-buffer-275310",
+    "storage_bucket": "avian-buffer-275310.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:456341155701:android:d27f4486a77aecc9cf6d3c",
+        "android_client_info": {
+          "package_name": "space.banana"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "456341155701-79hhbac8kjg4j8pn8bu015vhqml10qpk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChkeGEY9LjiWEKJB4ykyJNQC2P4YTsUDc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "456341155701-79hhbac8kjg4j8pn8bu015vhqml10qpk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
